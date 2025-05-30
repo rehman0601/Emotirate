@@ -1,0 +1,185 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    margin: 0; padding: 1rem;
+    color: #222;
+  }
+  h1 {
+    text-align: center;
+  }
+  #themeToggle {
+    position: fixed;
+    top: 1rem; right: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: #007bff; color: white;
+    border: none; border-radius: 4px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    width: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .emoji-picker {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .emoji {
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+  }
+  .emoji:hover, .emoji.selected {
+    transform: scale(1.3);
+  }
+  .mood-phrase {
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    min-height: 1.2em;
+  }
+  .submit-btn {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+  .submit-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+  #reviewsModal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  #reviewsModal.active {
+    display: flex;
+  }
+  #reviewsContent {
+    background: white;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+  }
+  #reviewsContent h2 {
+    margin-top: 0;
+  }
+  #closeReviews {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #555;
+  }
+  .review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+  }
+  .review-item:last-child {
+    border-bottom: none;
+  }
+  .review-emoji {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .search-pagination {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .pagination-btn {
+    margin: 0 0.3rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    background: white;
+    color: #007bff;
+  }
+  .pagination-btn.active {
+    background: #007bff;
+    color: white;
+  }
+  #exportBtn, #resetBtn, #undoBtn {
+    margin: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  #exportBtn {
+    background: #17a2b8;
+    color: white;
+  }
+  #resetBtn {
+    background: #dc3545;
+    color: white;
+  }
+  #undoBtn {
+    background: #ffc107;
+    color: black;
+  }
+  /* Dark theme */
+  body.dark {
+    background: #121212;
+    color: #ddd;
+  }
+  body.dark .product-card {
+    background: #1e1e1e;
+    box-shadow: 0 2px 6px rgb(255 255 255 / 0.1);
+  }
+  body.dark .submit-btn {
+    background: #2ecc71;
+  }
+  body.dark #exportBtn {
+    background: #17a2b8;
+  }
+  body.dark #resetBtn {
+    background: #e74c3c;
+  }
+  body.dark #undoBtn {
+    background: #f1c40f;
+    color: black;
+  }

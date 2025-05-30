@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Distraction Tracker App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <button id="themeToggle" aria-label="Toggle Theme">Toggle Theme</button>
+
+    <div class="container">
+    <h1>Distraction Tracker App</h1>
+    <div id="product-list" class="product-list" aria-live="polite"></div>
+
+    <div style="text-align:center; margin-top: 1rem;">
+        <button id="viewReviewsBtn" aria-haspopup="dialog">View All Reviews</button>
+        <button id="undoBtn" disabled>Undo Last</button>
+        <button id="exportBtn">Export Data (JSON)</button>
+        <button id="resetBtn">Reset All Ratings</button>
+    </div>
+    </div>
+
+    <!-- Reviews Modal -->
+    <div id="reviewsModal" role="dialog" aria-modal="true" aria-labelledby="reviewsTitle" tabindex="-1">
+    <div id="reviewsContent">
+        <button id="closeReviews" aria-label="Close Reviews">&times;</button>
+        <h2 id="reviewsTitle">All Reviews</h2>
+        <input id="searchInput" type="search" placeholder="Search by product or mood phrase" aria-label="Search reviews" />
+        <div id="reviewsList" style="margin-top:1rem;"></div>
+        <div class="search-pagination" id="pagination"></div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
